@@ -1,0 +1,9 @@
+Explicit solvent molecular dynamics constant pressure 400K 20 ns MD
+ &cntrl
+   imin=0, irest=1, ntx=5, 
+   ntpr=20000, ntwx=20000, ntwr=20000, nstlim=20000000, 
+   dt=0.001, ntt=3, tempi=400, 
+   temp0=400, gamma_ln=1.0, ig=-1, 
+   ntp=1, ntc=2, ntf=2, cut=9, 
+   ntb=2, iwrap=1, ioutfm=1, 
+/
