@@ -1,0 +1,7 @@
+This tutorial was used as a reference
+
+https://ambermd.org/tutorials/basic/tutorial14/index.php
+
+Although at that point I somewhat understood Amber inputs already. I plan to switch to nvt and enable respa to accelerate MD. I ahd to decrease the time step as the first 100 ns simulation at 400K
+
+Seemed like it just blew up. Later I found out it was just above the MD melting temp
