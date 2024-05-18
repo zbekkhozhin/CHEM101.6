@@ -1,0 +1,5 @@
+These are the amber input files and the intitial structure with the prmtop file. For different temperatures, I reran entire minimization with the different final temperature setting. 
+
+All input files were taken from an amber tutorial and modified slightly to fit my case (I played with shake option, restraint mask, restraint weight)
+
+https://ambermd.org/tutorials/basic/tutorial13/index.php
