@@ -1,0 +1,19 @@
+I have done NPT simulations in amber with your FF, dt = 1 fs, shake was on, at 300, 330, 350, 400 K each for 60 ns. Relaxation tutorial was followed from amber;
+Each resulting relaxed structure was a bit different so I hope that there is no big problem with starting from a funky conformation
+
+Initially I was running dt = 2 fs but was afraid that it would result in the system exploding
+
+I was also concerned that the first thing I ran, 400 K with dt = 2 fs unfolded completely and amber said that dt = 2 fs should not be used above 300K. So I used 1 fs
+
+For 300, 350 and 400 K, there were no restraints. 300 K stayed very close to the input, 350 K unfolded the N-terminal helix of the folded domain of Atg23,
+400 K unfolded entire Atg23
+
+To accelerate folding-unfolding of the helical peptide, I have already ran two simulations at 330 and 350 K restraining the part of Atg23 far away from binding site, that 
+actually unfolds(i.e. it does not participate in binding but it unfolds with no effect on the Atg23-Atg9 binding). The restraint weight was 1 kcal/mol 
+(honestly too high) for 350 K and 0.3 kcal/mol for 330 K. 
+
+In the 350 K simulation, I witnessed peptide flying away and then coming back into the binding pocket. Problem was that this time, part of the C-terminal Atg23 helix unfolded
+and made a beta sheet with the peptide when it came back, giving an unnatural conformation. So I restrained Atg23's C-terminal helix in addition to the 
+already restrained portion in the 330K simulation. In the 330K simulation, I observed peptide wiggling around in different conformations in the binding pocket without flying away
+
+Now I am going to see what happens at 340 K with the same restraint as with the 330 K. I want to see dynamics but I do not want to see complete unfolding
